@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your cart — NAEEM CHICKENS LABDAHA</title>
+<meta name="description" content="Review your chicken order.">
+<meta name="theme-color" content="#1f2a24">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/images/icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="section"><div class="container"><h1 style="font-size:1.9rem">Your cart</h1><div id="msg"></div>
+<div class="split sidebar"><div class="card" style="padding:6px 16px"><div id="lines"><div class="sk" style="height:120px;margin:12px 0"></div></div></div>
+<aside class="summary sticky" id="sum" hidden><h3>Order summary</h3>
+<fieldset style="border:0;padding:0;margin:0 0 10px"><legend class="hint">Receive your order by</legend><div class="radio-cards"><label><input type="radio" name="ful" value="PICKUP" checked><span>Pickup</span></label><label><input type="radio" name="ful" value="DELIVERY"><span>Delivery</span></label></div></fieldset>
+<div class="field"><label for="disc">Discount code</label><div style="display:flex;gap:8px"><input id="disc" maxlength="30" autocomplete="off"><button class="btn sm light" id="apply" type="button" style="border:1.5px solid var(--line)">Apply</button></div><div class="errmsg" id="d-err"></div></div>
+<div class="r"><span>Subtotal</span><span id="t-sub"></span></div><div class="r" id="r-disc" hidden><span>Discount</span><span id="t-disc"></span></div><div class="r" id="r-del" hidden><span>Delivery</span><span id="t-del"></span></div>
+<div class="r total"><span>Total</span><span id="t-total"></span></div><p class="hint" id="est" hidden>Estimate — confirming prices with the shop…</p><div id="warn"></div>
+<a class="btn primary" id="go" href="checkout.html" style="width:100%">Continue to checkout</a><button class="btn ghost sm" id="clear" type="button" style="width:100%;margin-top:8px;color:var(--ink)">Clear cart</button></aside></div></div></section>
+<div class="sticky-cart" id="sc" hidden><a class="btn primary" id="sgo" href="checkout.html" style="width:100%;box-shadow:var(--shadow)">Checkout · <span id="sc-total"></span></a></div>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/cart.js"></script>
+<script>NC.init(function(){ NC.initCart(); });</script>
+</body>
+</html>

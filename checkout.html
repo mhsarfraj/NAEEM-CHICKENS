@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Checkout — NAEEM CHICKENS LABDAHA</title>
+<meta name="description" content="Place your chicken order.">
+<meta name="theme-color" content="#1f2a24">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/images/icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="section"><div class="container" id="wrap"><h1 style="font-size:1.9rem">Checkout</h1><div id="msg"></div><div id="gate"></div>
+<form id="co" novalidate class="split sidebar"><div class="card" style="padding:18px">
+<h3>Your details</h3><div class="form-grid two">
+<div class="field"><label for="name">Full name *</label><input id="name" autocomplete="name" maxlength="80" required><div class="errmsg"></div></div>
+<div class="field"><label for="phone">Mobile number *</label><input id="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="14" required><div class="errmsg"></div></div>
+<div class="field"><label for="wa">WhatsApp number <span class="hint">(optional)</span></label><input id="wa" type="tel" inputmode="numeric" maxlength="14"><div class="errmsg"></div></div></div>
+<h3>Pickup or delivery</h3><div class="radio-cards" style="margin-bottom:14px"><label><input type="radio" name="ful" value="PICKUP" checked><span>Pickup from shop</span></label><label><input type="radio" name="ful" value="DELIVERY"><span>Home delivery</span></label></div>
+<div id="addr-wrap" hidden><div class="field"><label for="address">Delivery address *</label><textarea id="address" maxlength="300" autocomplete="street-address"></textarea><div class="errmsg"></div></div><div class="field"><label for="landmark">Landmark</label><input id="landmark" maxlength="120"></div></div>
+<div class="form-grid two"><div class="field"><label for="date">Date *</label><input id="date" type="date" required></div><div class="field"><label for="time">Time *</label><input id="time" type="time" required><div class="errmsg"></div></div></div>
+<h3>Payment</h3><div class="radio-cards" id="pays" style="margin-bottom:14px"></div>
+<div class="field"><label for="notes">Cutting instructions / notes</label><textarea id="notes" maxlength="400" placeholder="e.g. small curry pieces, remove skin"></textarea></div>
+<input class="hp" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+</div><aside class="summary sticky"><h3>Order summary</h3><div id="qmsg"></div><div id="osum"><div class="sk" style="height:140px"></div></div>
+<button class="btn primary" id="place" type="submit" style="width:100%;margin-top:10px" disabled>Place order</button><p class="hint">By placing this order you agree to be contacted on the numbers provided. Payment is confirmed only after the shop verifies it.</p></aside></form></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/checkout.js"></script>
+<script>NC.init(function(){ NC.initCheckout(); });</script>
+</body>
+</html>

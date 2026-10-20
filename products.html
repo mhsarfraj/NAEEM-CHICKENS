@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Products — NAEEM CHICKENS LABDAHA</title>
+<meta name="description" content="Fresh chicken, keema and custom cuts priced per kilogram.">
+<meta name="theme-color" content="#1f2a24">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/images/icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="section"><div class="container"><h1 style="font-size:1.9rem">Our products</h1><p class="hint">All prices are per kilogram. Choose a weight and add to your cart.</p><div id="msg"></div>
+<div class="toolbar"><div><label class="sr-only" for="q">Search products</label><input id="q" type="search" placeholder="Search products…" autocomplete="off"></div><div><label class="sr-only" for="sort">Sort</label><select id="sort"><option value="featured">Featured first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name A–Z</option></select></div></div>
+<div class="cats" id="cats" role="group" aria-label="Categories"></div>
+<div class="grid-cards" id="grid"></div></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/products.js"></script>
+<script>NC.init(function(){ NC.initCatalogPage(); });</script>
+</body>
+</html>

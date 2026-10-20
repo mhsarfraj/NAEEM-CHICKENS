@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Events & Bulk Supply — NAEEM CHICKENS LABDAHA</title>
+<meta name="description" content="Chicken supply for weddings, parties, hotels, restaurants and caterers in Labdaha.">
+<meta name="theme-color" content="#1f2a24">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/images/icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="section"><div class="container" style="max-width:860px"><h1 style="font-size:1.9rem">Event &amp; bulk supply</h1><p>Weddings, parties, family functions, restaurants, hotels and caterers — tell us what you need and we will send a quotation. Large orders are quoted separately from retail prices.</p>
+<div class="cta"><button class="btn wa" id="bwa" type="button">WhatsApp enquiry</button></div><div id="msg"></div><div id="done"></div>
+<form id="bf" class="card" style="padding:18px" novalidate><div class="form-grid two">
+<div class="field"><label for="bname">Your name / organisation *</label><input id="bname" maxlength="100"><div class="errmsg"></div></div>
+<div class="field"><label for="org">Business / venue name</label><input id="org" maxlength="100"></div>
+<div class="field"><label for="bphone">Mobile number *</label><input id="bphone" type="tel" inputmode="numeric"><div class="errmsg"></div></div>
+<div class="field"><label for="bwa2">WhatsApp number</label><input id="bwa2" type="tel" inputmode="numeric"></div>
+<div class="field"><label for="edate">Event date *</label><input id="edate" type="date"><div class="errmsg"></div></div>
+<div class="field"><label for="etime">Delivery time</label><input id="etime" type="time"></div>
+<div class="field"><label for="guests">Estimated guests</label><input id="guests" type="number" min="0" inputmode="numeric"></div>
+<div class="field"><label for="qty">Chicken required (kg) *</label><input id="qty" type="number" min="1" step="0.5" inputmode="decimal"><div class="errmsg"></div></div></div>
+<div class="field"><label for="eloc">Event location *</label><input id="eloc" maxlength="300"><div class="errmsg"></div></div>
+<fieldset class="field" style="border:0;padding:0"><legend>What do you need?</legend><div class="qty"><label class="chip"><input type="checkbox" name="prod" value="Whole chicken" style="width:auto;min-height:0"> Whole chicken</label><label class="chip"><input type="checkbox" name="prod" value="Curry cut" style="width:auto;min-height:0"> Curry cut</label><label class="chip"><input type="checkbox" name="prod" value="Boneless" style="width:auto;min-height:0"> Boneless</label><label class="chip"><input type="checkbox" name="prod" value="Keema" style="width:auto;min-height:0"> Keema</label><label class="chip"><input type="checkbox" name="prod" value="Custom cut" style="width:auto;min-height:0"> Custom cut</label></div></fieldset>
+<div class="radio-cards" style="margin-bottom:14px"><label><input type="radio" name="sup" value="ONE_TIME" checked><span>One-time supply</span></label><label><input type="radio" name="sup" value="RECURRING"><span>Recurring supply</span></label></div>
+<div class="radio-cards" style="margin-bottom:14px"><label><input type="radio" name="bf" value="DELIVERY" checked><span>Delivery to venue</span></label><label><input type="radio" name="bf" value="PICKUP"><span>I will pick up</span></label></div>
+<div class="field"><label for="instr">Special preparation instructions</label><textarea id="instr" maxlength="500"></textarea></div>
+<div class="field"><label for="budget">Budget / pricing request</label><input id="budget" maxlength="200" placeholder="e.g. need best rate for 100 kg weekly"></div>
+<input class="hp" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn primary" id="bgo" type="submit">Send enquiry</button></form></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/bulk.js"></script>
+<script>NC.init(function(){ NC.initBulk(); });</script>
+</body>
+</html>

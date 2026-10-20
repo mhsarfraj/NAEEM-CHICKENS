@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact & Location — NAEEM CHICKENS LABDAHA</title>
+<meta name="description" content="Address, phone, WhatsApp, hours and delivery area of NAEEM CHICKENS LABDAHA, Labdaha.">
+<meta name="theme-color" content="#1f2a24">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/images/icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="section"><div class="container"><h1 style="font-size:1.9rem">Contact &amp; location</h1><div class="split"><div class="card" style="padding:18px"><h3>NAEEM CHICKENS LABDAHA</h3><p data-bind="Locality"></p><p data-contact></p>
+<div class="cta"><a class="btn primary" data-call hidden>Call now</a><button class="btn wa" data-wa>WhatsApp</button><a class="btn light" id="mapbtn" hidden target="_blank" rel="noopener" style="border:1.5px solid var(--line)">Open in Google Maps</a></div>
+<h3>Delivery area</h3><p data-bind="DeliveryArea"></p></div>
+<div class="card" style="padding:18px"><h3>Opening hours</h3><p><span class="pill loading" data-status-pill>CHECKING…</span></p><p data-status-line class="hint"></p><table class="hours" id="hours"></table></div></div>
+<div id="map" style="margin-top:18px"></div></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/app.js"></script>
+<script>NC.init(function(){ (function(){
+ function hours(){var s=NC.status||{},w=s.week||[],t=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Kolkata'})).getDay()];
+  document.getElementById('hours').innerHTML=w.length?w.map(function(d){return '<tr class="'+(d.day===t?'today':'')+'"><td>'+d.day+'</td><td style="text-align:right">'+(d.closed?'Closed':d.open+' – '+d.close)+'</td></tr>';}).join(''):'<tr><td>Hours will be shown once the shop publishes them.</td></tr>';}
+ hours(); document.addEventListener('nc:status',hours);
+ var u=NC.setting('GoogleMapsURL'),e=NC.setting('MapsEmbedURL'),b=document.getElementById('mapbtn');
+ if(u){b.href=u;b.hidden=false;}
+ document.getElementById('map').innerHTML=/^https:\/\//.test(e)?'<iframe title="Shop location map" src="'+NC.esc(e)+'" style="border:0;width:100%;height:340px;border-radius:14px" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>':'<div class="alert info"><div>Map will appear here once the shop adds its Google Maps location.</div></div>';
+})(); });</script>
+</body>
+</html>

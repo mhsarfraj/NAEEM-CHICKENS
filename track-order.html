@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Track your order — NAEEM CHICKENS LABDAHA</title>
+<meta name="description" content="Check the status of your chicken order.">
+<meta name="theme-color" content="#1f2a24">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/images/icon-180.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="section"><div class="container" style="max-width:720px"><h1 style="font-size:1.9rem">Track your order</h1><p class="hint">Enter your order ID and the mobile number you used when ordering.</p><div id="msg"></div>
+<form id="tf" class="card" style="padding:18px" novalidate><div class="form-grid two"><div class="field"><label for="oid">Order ID</label><input id="oid" placeholder="NC-261016-001" autocomplete="off"></div><div class="field"><label for="ph">Mobile number</label><input id="ph" type="tel" inputmode="numeric" autocomplete="tel"></div></div><button class="btn primary" id="tgo" type="submit">Track order</button></form>
+<div id="result" style="margin-top:16px"></div></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/tracking.js"></script>
+<script>NC.init(function(){ NC.initTracking(); });</script>
+</body>
+</html>
